@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+}
+
+.google-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.box h2 {
+    margin: 0 0 1rem;
+    padding: 0;
+    color: #1b1a1a;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.box .inputbox {
+    position: relative;
+}
+
+.box .inputbox input {
+    width: calc(100% - 20px);
+    padding: 0.525rem 20px;
+    font-size: 1rem;
+    letter-spacing: 0.062rem;
+    margin-bottom: 1.875rem;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.box .inputbox label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.eye-icon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 20%;
+    right: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.forgot {
+    margin-top: -10px;
+}
+
+.forgot button {
+    border-radius: 5px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    border: 0;
+}
+
+.box input[type="submit"] {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #1a73e8;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 0.8rem;
+    float: right;
+}
+
+.box input[type="submit"]:hover {
+    background-color: #1d2938;
+}
+
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label,
+.box .inputbox input:not([value=""]) ~ label {
+    top: -0.5rem;
+    left: 10px;
+    color: #1a73e8;
+    font-size: .75rem;
+    background-color: #fff;
+    height: 10px;
+    padding: 0 5px;
+}
+
+.box .inputbox input:focus {
+    outline: none;
+    border: 2px solid #1a73e8;
+    cursor: pointer;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 400px) {
+    .box {
+        width: 80%;
+        padding: 2rem;
+    }
+    .box .inputbox label {
+        width: auto;
+        padding: 0 5px;
+    }
+}
