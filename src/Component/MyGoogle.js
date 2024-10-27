@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './myGoogle.css';
+// import { Link } from 'react-router-dom';
 
 const MyGoogle = () => {
   const [email, setEmail] = useState('');
@@ -43,7 +44,16 @@ const MyGoogle = () => {
         <div className="forgot">
           <button type="button">Forgot Your Password?</button>
         </div>
-        <input type="submit" name="signin" value="Sign in" />
+        {/* <input type="submit" name="signin" value="Sign in" /> */}
+        <button type="submit" name="signin" className="signin-button">
+        <a
+                             href="https://myaccount.google.com/"
+                             className="block w-full text-white"
+                            >
+                             Sign In
+                            </a>
+          
+        </button>
       </form>
     </div>
   );
